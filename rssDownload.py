@@ -1,8 +1,9 @@
 from urls import rss_list
 import feedparser
 import sqlite3
+import time
 
-conn = sqlite3.connect('db/RSS.db')
+conn = sqlite3.connect('db/RSS.sqlite')
 cursor=conn.cursor()
 
 def buscaRSS():
@@ -12,7 +13,7 @@ def buscaRSS():
             try:
                 inserirRSS(i[1], i[0], entries.title)
             except Exception as e:
-                print(e)
+                print(i, e)
 
 def inserirRSS(publisher, keyword, title):
      cursor.execute("SELECT id FROM RSS WHERE title = ?", [title])
@@ -21,8 +22,7 @@ def inserirRSS(publisher, keyword, title):
          cursor.execute("INSERT INTO RSS (keyword, publisher, title) VALUES (?,?,?)", [keyword,publisher,title])
          conn.commit()
          print("Inserido: {}".format(title))
-     else:
-        print(">>: {}".format(title))
 
-
-buscaRSS()
+while True:
+    buscaRSS()
+    time.sleep(30)

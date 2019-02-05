@@ -38,10 +38,7 @@ rss_list = [
 ["R7", "esporte", "http://esportes.r7.com/feed.xml"],
 ["UOL", "tecnologia", "http://tecnologia.uol.com.br/ultnot/index.xml"],
 ["UOL", "esporte", "http://esporte.uol.com.br/basquete/ultimas/index.xml"],
-["UOL", "musica", "http://musica.uol.com.br/ultnot/index.xml"],
 ["UOL", "cinema", "http://cinema.uol.com.br/ultnot/index.xml"],
 ["BBC", "brasil", "http://www.bbc.co.uk/portuguese/topicos/brasil/index.xml"],
-["EBC", "tecnologia", "http://www.ebc.com.br/rss/tecnologia/feed.xml"],
-["EBC", "esporte", "http://www.ebc.com.br/rss/esportes/feed.xml"],
-["EBC", "educacao", "http://www.ebc.com.br/rss/educacao/feed.xml"]
+["OLHAR_DIGITAL", "tecnologia", "https://olhardigital.com.br/rss"]
 ]
