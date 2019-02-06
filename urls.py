@@ -40,5 +40,6 @@ rss_list = [
 ["UOL", "esporte", "http://esporte.uol.com.br/basquete/ultimas/index.xml"],
 ["UOL", "cinema", "http://cinema.uol.com.br/ultnot/index.xml"],
 ["BBC", "brasil", "http://www.bbc.co.uk/portuguese/topicos/brasil/index.xml"],
-["OLHAR_DIGITAL", "tecnologia", "https://olhardigital.com.br/rss"]
+["OLHAR_DIGITAL", "tecnologia", "https://olhardigital.com.br/rss"],
+["BAND", "geral", "https://www.band.uol.com.br/rss/band/"]
 ]

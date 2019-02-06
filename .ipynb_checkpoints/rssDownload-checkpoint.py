@@ -11,7 +11,7 @@ def buscaRSS():
         feed = feedparser.parse(i[2])
         for entries in feed.entries:
             try:
-                inserirRSS(i[0], i[1], entries.title)
+                inserirRSS(i[1], i[0], entries.title)
             except Exception as e:
                 print(i, e)
 
