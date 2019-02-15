@@ -112,5 +112,20 @@ rss_list = [
 ["INFOMONEY", "emprego", "https://www.infomoney.com.br/carreira/emprego/rss"],
 ["INFOMONEY", "carreiras", "https://www.infomoney.com.br/blogs/negocios-e-carreira/empreendedorismo-digital/rss"],
 ["INFOMONEY", "carreiras", "https://www.infomoney.com.br/carreira/emprego/rss"],
-["O_GLOBO","geral","https://oglobo.globo.com/rss.xml"]
+["O_GLOBO","geral","https://oglobo.globo.com/rss.xml"],
+["A_GAZETA_ACRE","geral","https://agazetadoacre.com/feed/"],
+["A_TRIBUNA","geral","http://www.jornalatribuna.com.br/?feed=rss2"],
+["METRO","geral","https://www.metrojornal.com.br/br/sitemap/news-sitemap.xml"],
+["JORNAL_PIRACICABA","geral","http://www.jornaldepiracicaba.com.br/feed/"],
+["CORREIO_POVO","geral","https://www.correiodopovo.com.br/cmlink/ultimas-noticias-1.244006"],
+["JORNAL_COMERCIO","ultimas_noticias","https://www.jornaldocomercio.com/_conteudo/ultimas_noticias/rss.xml"],
+["JORNAL_COMERCIO","carros","https://www.jornaldocomercio.com/_conteudo/cadernos/automotor/rss.xml"],
+["JORNAL_COMERCIO","arte","https://www.jornaldocomercio.com/_conteudo/cultura/rss.xml"],
+["JORNAL_COMERCIO","economia","https://www.jornaldocomercio.com/_conteudo/economia/rss.xml"],
+["JORNAL_COMERCIO","esporte","https://www.jornaldocomercio.com/_conteudo/esportes/rss.xml"],
+["JORNAL_COMERCIO","geral","https://www.jornaldocomercio.com/_conteudo/geral/rss.xml"],
+["JORNAL_COMERCIO","mundo","https://www.jornaldocomercio.com/_conteudo/internacional/rss.xml"],
+["JORNAL_COMERCIO","politica","https://www.jornaldocomercio.com/_conteudo/politica/rss.xml"],
+["JORNAL_COMERCIO","opniao","https://www.jornaldocomercio.com/_conteudo/opiniao/rss.xml"]
+
 ]
