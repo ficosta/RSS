@@ -21,7 +21,7 @@ def inserirRSS(publisher, keyword, title):
      if data is None:
          cursor.execute("INSERT INTO RSS (keyword, publisher, title) VALUES (?,?,?)", [keyword,publisher,title])
          conn.commit()
-         print("Inserido: {}".format(title))
+         print("Inserido: {} - {}".format(publisher, title))
 
 while True:
     buscaRSS()
