@@ -2,6 +2,7 @@ from urls import rss_list
 import feedparser
 import sqlite3
 import time
+import rssMQTTNotfier as mqtt
 
 conn = sqlite3.connect('db/RSS.sqlite')
 cursor=conn.cursor()
@@ -16,9 +17,11 @@ def buscaRSS():
                 print(i, e)
 
 def inserirRSS(publisher, keyword, title):
+
      cursor.execute("SELECT id FROM RSS WHERE title = ?", [title])
      data=cursor.fetchone()
      if data is None:
+         mqtt.client.publish("rss/{}".format(keyword), "{} - {}".format(keyword,title), qos=0, retain=True)
          cursor.execute("INSERT INTO RSS (keyword, publisher, title) VALUES (?,?,?)", [keyword,publisher,title])
          conn.commit()
          print("Inserido: {} - {}".format(publisher, title))
