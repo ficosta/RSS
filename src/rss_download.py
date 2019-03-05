@@ -1,9 +1,13 @@
-from data.urls import rss_list
-from colorama import Fore
 import feedparser
 import time
 import data.mongo_setup as mongo_setup
+import logging
+
 from services.data_services import add_item, find_item
+from data.urls import rss_list
+from colorama import Fore
+
+logging.basicConfig(filename='rss.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 
 def busca_rss():
@@ -17,6 +21,7 @@ def busca_rss():
                     rss_item = add_item(feed_entry, rss)
                     print(Fore.GREEN + f" +++ {rss_item.title} adicionado com o id {rss_item.id}")
             except Exception as e:
+                logging.error(f"{e} - {rss['publisher']} --- {feed_entry.title} -> URL: {rss['url']}")
                 print(e)
 
 

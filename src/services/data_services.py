@@ -13,7 +13,8 @@ def add_item(rss_item: fp.FeedParserDict, rss_list_item: dict) -> Item:
     item.publisher = rss_list_item['publisher']
     item.section = rss_list_item['section']
     item.link = rss_item.link
-    item.timestamp = strftime(rss_item.published, gmtime())
+    if 'timestamp' in rss_item:
+        item.timestamp = strftime(rss_item.published, gmtime())
     item.save()
 
     return item
