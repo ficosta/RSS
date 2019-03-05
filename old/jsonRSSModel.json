@@ -1,0 +1,23 @@
+{
+  "identifier": 12313123,
+  "publisher": "G1",
+  "editoria": "politica",
+  "source": "web",
+  "title": "titulo",
+  "link": "http://",
+  "midiaUrl": null,
+  "text": ".....",
+  "timestamp": ""
+}
+
+
+
+  publisher = mongoengine.StringField(required=True)
+    section = mongoengine.StringField(required=True)
+    source = mongoengine.StringField(required=True)
+    title = mongoengine.StringField(required=True)
+    language = mongoengine.StringField(required=True)
+    link = mongoengine.URLField(required=True)
+    text = mongoengine.StringField(required=False)
+    mediaUrl = mongoengine.URLField(required=False)
+    timestamp = mongoengine.DateTimeField(required=True, default=datetime.datetime.now)

@@ -1,15 +1,16 @@
-from urls import rss_list
+from urls import rssList
 import feedparser
 import sqlite3
 import time
 
-conn = sqlite3.connect('db/RSS.sqlite')
-cursor=conn.cursor()
+#conn = sqlite3.connect('db/RSS.sqlite')
+#cursor=conn.cursor()
 
 def buscaRSS():
-    for i in rss_list:
-        feed = feedparser.parse(i[2])
+    for i in rssList:
+        feed = feedparser.parse(i['url'])
         for entries in feed.entries:
+            print(type(entries))
             try:
                 inserirRSS(i[0], i[1], entries.title)
             except Exception as e:

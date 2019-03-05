@@ -1,17 +1,17 @@
-from urls import rssList
+from old.urls import rssList
 import feedparser
-import sqlite3
 import time
-import rssMQTTNotfier as mqtt
 import json
-import news
+from old import rssMQTTNotfier as mqtt
+from src.data import rss
+
 
 def buscaRSS():
     for rssItem in rssList:
         feed = feedparser.parse(rssItem['url'])
         for entries in feed.entries:
             try:
-                newsItem = news.News(publisher=rssItem['publisher'], section=rssItem['section'], source=rssItem['source'], title=entries.title, language=rssItem['language'], text=entries.description)
+                newsItem = rss.News(publisher=rssItem['publisher'], section=rssItem['section'], source=rssItem['source'], title=entries.title, language=rssItem['language'], text=entries.description)
                 streamingRSS(newsItem)
             except Exception as e:
                 print(rssItem, e)

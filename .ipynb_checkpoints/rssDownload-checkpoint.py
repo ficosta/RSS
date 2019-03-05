@@ -1,4 +1,4 @@
-from urls import rss_list
+from old.urls import rss_list
 import feedparser
 import sqlite3
 import time
