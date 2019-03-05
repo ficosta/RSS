@@ -5,11 +5,9 @@ import datetime
 class Item(mongoengine.Document):
     publisher = mongoengine.StringField(required=True)
     section = mongoengine.StringField(required=True)
-    source = mongoengine.StringField(required=True)
     title = mongoengine.StringField(required=True)
     language = mongoengine.StringField(required=True)
     link = mongoengine.URLField(required=True)
-    text = mongoengine.StringField(required=False)
     mediaUrl = mongoengine.URLField(required=False)
     timestamp = mongoengine.DateTimeField(required=True, default=datetime.datetime.now)
 
