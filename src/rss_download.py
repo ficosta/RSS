@@ -3,8 +3,6 @@ from colorama import Fore
 import feedparser
 import time
 import data.mongo_setup as mongo_setup
-
-
 from services.data_services import add_item, find_item
 
 
