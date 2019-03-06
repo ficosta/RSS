@@ -7,7 +7,7 @@ class Item(mongoengine.Document):
     section = mongoengine.StringField(required=True)
     title = mongoengine.StringField(required=True)
     language = mongoengine.StringField(required=True)
-    link = mongoengine.URLField(required=True)
+    link = mongoengine.URLField(required=False)
     mediaUrl = mongoengine.URLField(required=False)
     timestamp = mongoengine.DateTimeField(required=True, default=datetime.datetime.now)
 

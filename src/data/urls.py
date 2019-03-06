@@ -225,8 +225,6 @@ rss_list = [
      'url': 'http://rss.uol.com.br/feed/economia.xml'},
     {'publisher': 'UOL', 'section': 'vestibular', 'language': 'pt_BR',
      'url': 'http://rss.uol.com.br/feed/vestibular.xml'},
-    {'publisher': 'BBC', 'section': 'brasil', 'language': 'pt_BR',
-     'url': 'http://www.bbc.co.uk/portuguese/topicos/brasil/index.xml'},
     {'publisher': 'BBC', 'section': 'ultimas_noticias', 'language': 'pt_BR',
      'url': 'http://feeds.bbci.co.uk/portuguese/rss.xml'},
     {'publisher': 'BBC', 'section': 'america_latina', 'language': 'pt_BR',

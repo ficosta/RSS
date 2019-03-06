@@ -11,17 +11,17 @@ logging.basicConfig(filename='rss.log', filemode='w', format='%(name)s - %(level
 
 
 def busca_rss():
-    for rss in rss_list:
-        feed = feedparser.parse(rss['url'])
+    for rss_list_item in rss_list:
+        feed = feedparser.parse(rss_list_item['url'])
         for feed_entry in feed.entries:
             try:
-                if find_item(feed_entry, rss):
+                if find_item(feed_entry, rss_list_item):
                     print(Fore.YELLOW + f" >>> {feed_entry.title}")
                 else:
-                    rss_item = add_item(feed_entry, rss)
+                    rss_item = add_item(feed_entry, rss_list_item)
                     print(Fore.GREEN + f" +++ {rss_item.title} adicionado com o id {rss_item.id}")
             except Exception as e:
-                logging.error(f"{e} - {rss['publisher']} --- {feed_entry.title} -> URL: {rss['url']}")
+                logging.error(f"{e} - {rss_list_item['publisher']} --- {feed_entry.title} -> URL: {rss_list_item['url']}")
                 print(e)
 
 

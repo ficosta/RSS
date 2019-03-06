@@ -8,11 +8,12 @@ def add_item(rss_item: fp.FeedParserDict, rss_list_item: dict) -> Item:
     item = Item()
     item.title = rss_item.title.strip()
     if 'media_content' in rss_item:
-        item.mediaUrl = rss_item.media_content[0]['url']
+        item.mediaUrl = rss_item.media_content[0]['url'].replace(" ", "%20")
     item.language = rss_list_item['language']
     item.publisher = rss_list_item['publisher']
     item.section = rss_list_item['section']
-    item.link = rss_item.link
+    if 'link' in rss_item:
+        item.link = rss_item.link
     if 'timestamp' in rss_item:
         item.timestamp = strftime(rss_item.published, gmtime())
     item.save()
