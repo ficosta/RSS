@@ -299,5 +299,13 @@ rss_list = [
     {'publisher': 'O_TV_FOCO', 'section': 'fofoca', 'language': 'pt_BR',
      'url': 'https://www.otvfoco.com.br/feed/'},
     {'publisher': 'EXTRA', 'section': 'ultimas_noticias', 'language': 'pt_BR',
-     'url': 'https://extra.globo.com/rss.xml'}
+     'url': 'https://extra.globo.com/rss.xml'},
+    {'publisher': 'DIARIO_GAUCHO', 'section': 'esporte', 'language': 'pt_BR',
+     'url': 'http://diariogaucho.clicrbs.com.br/rs/esporte/ultimas-noticias-rss/'},
+    {'publisher': 'DIARIO_GAUCHO', 'section': 'ultimas_noticias', 'language': 'pt_BR',
+     'url': 'http://diariogaucho.clicrbs.com.br/rs/ultimas-noticias-rss/'},
+    {'publisher': 'DIARIO_GAUCHO', 'section': 'entretenimento', 'language': 'pt_BR',
+     'url': 'http://diariogaucho.clicrbs.com.br/rs/entretenimento/ultimas-noticias-rss/'},
+    {'publisher': 'DIARIO_GAUCHO', 'section': 'policia', 'language': 'pt_BR',
+     'url': 'http://diariogaucho.clicrbs.com.br/rs/policia/ultimas-noticias-rss/'}
 ]
