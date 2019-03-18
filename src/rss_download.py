@@ -21,7 +21,7 @@ def busca_rss():
                     rss_item = add_item(feed_entry, rss_list_item)
                     print(Fore.GREEN + f" +++ {rss_item.title} adicionado com o id {rss_item.id}")
             except Exception as e:
-                logging.error(f"{e} - {rss_list_item['publisher']} --- {feed_entry.title} -> URL: {rss_list_item['url']}")
+                logging.error(f"{e} - {rss_list_item['publisher']} -> URL: {rss_list_item['url']}")
                 print(e)
 
 
