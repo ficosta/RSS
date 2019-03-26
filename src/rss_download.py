@@ -2,12 +2,13 @@ import feedparser
 import time
 import data.mongo_setup as mongo_setup
 import logging
+import sys
 
 from services.data_services import add_item, find_item
 from data.urls import rss_list
 from colorama import Fore
 
-logging.basicConfig(filename='rss.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(stream=sys.stdout, format='%(name)s - %(levelname)s - %(message)s')
 
 
 def busca_rss():
