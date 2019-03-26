@@ -1,10 +1,9 @@
-FROM 3.8.0a2-alpine3.9
+FROM python:3.8.0a2-alpine3.9
 
-ADD src:/src
-ADD requirements.txt:requirements.txt
+COPY src /src
 
-RUN pip instal -R requirements.txt
+WORKDIR /src
 
-CHDIR src
+RUN pip install -r requirements.txt
 
 CMD [ "python", "./rss_download.py" ]
