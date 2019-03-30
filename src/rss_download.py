@@ -17,20 +17,19 @@ def busca_rss():
         for feed_entry in feed.entries:
             try:
                 if find_item(feed_entry, rss_list_item):
-                    print(Fore.YELLOW + f" >>> {feed_entry.title}")
+                    logging.info(Fore.YELLOW + f" >>> {feed_entry.title}")
                 else:
                     rss_item = add_item(feed_entry, rss_list_item)
-                    print(Fore.GREEN + f" +++ {rss_item.title} adicionado com o id {rss_item.id}")
+                    logging.info(Fore.GREEN + f" +++ {rss_item.title} adicionado com o id {rss_item.id}")
             except Exception as e:
                 logging.error(f"{e} - {rss_list_item['publisher']} -> URL: {rss_list_item['url']}")
-                print(e)
 
 
 def main():
     mongo_setup.global_init()
     while True:
         busca_rss()
-        time.sleep(30)
+        time.sleep(60)
 
 
 if __name__ == '__main__':
